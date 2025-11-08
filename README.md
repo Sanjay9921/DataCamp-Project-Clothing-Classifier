@@ -1,65 +1,31 @@
-# [Project: Building an E-Commerce Clothing Classifier Model](https://app.datacamp.com/learn/projects/2059)
-
-## Credits
-
-Datacamp
+# E-Commerce Clothing Classifier Model
 
 ## Description
+Build a CNN-based image classifier to automate product tagging for an e-commerce clothing store. This model helps streamline inventory management and improves customer experience by categorizing clothing items into classes such as shirts, trousers, dresses, etc.
 
-Automate e-commerce processes with image classification.
+## Project Highlights
+- Use FashionMNIST dataset with 10 clothing categories.
+- Define a small CNN with convolution, ReLU, max-pooling, flattening, and fully connected layers.
+- Train the model with cross-entropy loss and Adam optimizer.
+- Evaluate using accuracy, precision, and recall metrics.
+- Predict classes on the test dataset and visualize results.
 
-### Project Details
+## Usage
+1. Define the CNN model architecture.
+2. Train on the training dataset with a few epochs.
+3. Predict on the test dataset and calculate evaluation metrics.
+4. Visualize performance with confusion matrix and misclassified samples.
 
-Transform the retail industry with cutting-edge AI: develop an innovative clothing classification system to create a smarter, more efficient shopping experience.
+## Metrics
+- Accuracy
+- Per-class Precision
+- Per-class Recall
 
-Leveraging machine learning, you’ll make it easier to find the perfect outfit among a variety of choices, opening up new possibilities in the rapidly evolving digital fashion world.
+## Technologies
+- PyTorch for model building and training
+- torchvision for datasets and transformations
+- torchmetrics for performance evaluation
+- matplotlib and seaborn for visualizations
 
-### Project Instructions
-
-Automate product tagging for the e-commerce store using CNNs.
-
-* Once trained (keeping the epochs to 1 or 2 to keep the run time down), store your predictions on the test set in a list named ``predictions``.
-* Calculate the ``accuracy``, and per-class ``precision`` and ``recall`` for your classifier based on the predictions obtained. Store your metrics in variables named ``accuracy``, ``precision``, and ``recall``. Use lists of the appropriate length for the precision and recall.
-
-### Guides
-
-#### 1. Defining the CNN (Convolutional Neural Network)
-
-Define a class containing all the appropriate layers, and a method to perform the forward pass of a batch of images.
-
-* Creating a class to contain the layers of a CNN
-    * You could define a class that inherits from PyTorch's nn.Module class.
-* Adding a convolutional layer
-    * You could use PyTorch's nn.Conv2d() class to define the convolutional layer.
-    * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.conv.
-* Adding a Rectified Linear Unit
-    * You could use PyTorch's nn.ReLU() class.
-    * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.relu.
-* Adding a pooling layer
-    * You could use PyTorch's nn.MaxPool2d() class.
-    * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.maxpool.
-* Adding a fully connected layer
-    * You could use PyTorch's nn.Linear() class.
-    * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.fc.
-    * You will also need to flatten the input first, which could be done with an instance of nn.Flatten().
-* Defining a .forward() method
-    * Finally, you'll need to define a .forward() method that passes the input through each layer and returns the output.
-
-#### 2. Training the CNN
-
-Define a training loop that loops over the dataset, calculating the loss and propagating it backwards through the network.
-
-* Define a suitable loss criterion
-    * PyTorch's nn.CrossEntropyLoss() could be used here, since this is a multi-class classification problem.
-* Define an optimizer
-    * You could use PyTorch's optim.Adam() optimizer here.
-
-#### 3. Testing the CNN
-
-Use your trained model to classify the images in the test set, and calculate the appropriate metrics.
-
-* Predict the category of each image in the test data.
-    * You'll need to use the .forward() method on your CNN class to pass the test images through the network.
-    * You could use torch.argmax() to find the category with the highest predicted probability.
-* Calculate the performance metrics
-    * You could use Accuracy(), Precision(), and Recall() from torchmetrics to calculate the metrics.
+## Credits
+Datacamp - project base and tutorial
