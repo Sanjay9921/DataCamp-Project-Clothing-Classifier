@@ -28,20 +28,20 @@ Automate product tagging for the e-commerce store using CNNs.
 Define a class containing all the appropriate layers, and a method to perform the forward pass of a batch of images.
 
 * Creating a class to contain the layers of a CNN
-    * You could define a class that inherits from PyTorch's nn.Module class.
+    * You could define a class that inherits from PyTorch's nn.module class.
 * Adding a convolutional layer
-    * You could use PyTorch's nn.Conv2d() class to define the convolutional layer.
+    * You could use PyTorch's nn.Conv2D() class to define the convolutional layer.
     * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.conv.
-* Adding a Rectified Linear Unit
+* Adding a Rectilinear Unit
     * You could use PyTorch's nn.ReLU() class.
     * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.relu.
 * Adding a pooling layer
-    * You could use PyTorch's nn.MaxPool2d() class.
+    *  You could use PyTorch's nn.MaxPool2D() class.
     * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.maxpool.
 * Adding a fully connected layer
     * You could use PyTorch's nn.Linear() class.
     * Create an instance of it in your CNN class's constructor and assign it to an instance variable such as self.fc.
-    * You will also need to flatten the input first, which could be done with an instance of nn.Flatten().
+    * You will also need to flatten the input first, which could be done with an instance of nn.Flatten
 * Defining a .forward() method
     * Finally, you'll need to define a .forward() method that passes the input through each layer and returns the output.
 
